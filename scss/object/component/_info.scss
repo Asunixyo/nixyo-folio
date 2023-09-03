@@ -1,0 +1,17 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-info {
+  &-sns {
+    &-content {
+      border: 3px solid map-get($global-colors, "primary");
+      border-radius: 50%;
+      width: mu(4);
+      height: mu(4);
+      i {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

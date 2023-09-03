@@ -1,0 +1,143 @@
+$base-unit: 8px;
+
+// Multiplier Unit
+@function mu($multiplier) {
+  @return $multiplier * $base-unit;
+}
+
+// Colors
+$global-colors: (
+  "primary": #ff8ba7,
+  "secondary": #ffc6c7,
+  "tertiary": #c3f0ca,
+  "bg-primary": #faeee7,
+  "font-primary": #33272a,
+  "font-secondary": #594a4e,
+  "white": #ffffff,
+);
+
+$max-width: (
+  "header": mu(160),
+  "content": mu(113),
+  "nav": mu(50),
+  "contact": mu(87),
+  "single-blog-main": mu(76),
+);
+
+$opacity: (
+  "low": 0.3,
+  "medium": 0.7,
+  "high": 1,
+);
+
+$z-index: (
+  "nav-hamburger": 930,
+  "nav": 920,
+  "hamburger": 910,
+  "header": 900,
+  "footer": 800,
+  "main": 200,
+  "background-image": -100,
+);
+
+// Font
+$font-family-primary: "Yu Gothic", sans-serif;
+$font-family-secondary: "Zen Dots", cursive;
+
+$font-size: (
+  "h1": mu(4),
+  "h2": mu(8),
+  "h3": mu(3),
+  "h1-sm-md": mu(3),
+  "h2-sm-md": mu(2),
+  "p": mu(2),
+);
+
+$line-height: (
+  "h1": mu(5),
+  "h2": mu(9),
+  "h3": mu(3),
+  "h1-sm-md": mu(4),
+  "h2-sm-md": mu(4),
+  "p": mu(3),
+  "p-sm": mu(2),
+);
+
+// Spacing
+$base-spacing: mu(1);
+
+// Breakpoints
+$breakpoint: (
+  "sm": mu(75),
+  "md": mu(113),
+  "lg": mu(150),
+);
+
+// Helper function for string slug
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1)+$replace +str-replace(str-slice($string, $index + str-length($search)),
+      $search,
+      $replace );
+  }
+
+  @return $string;
+}
+
+@function str-slug($string) {
+  @return str-replace($string, " ", "-");
+}
+
+:root {
+  // Base unit
+  --base-unit: #{$base-unit};
+
+  // Colors
+  @each $color,
+  $value in $global-colors {
+    --color-#{str-slug($color)}: #{$value};
+  }
+
+  // Max width
+  @each $key,
+  $value in $max-width {
+    --max-width-#{str-slug($key)}: #{$value};
+  }
+
+  // Opacity
+  @each $key,
+  $value in $opacity {
+    --opacity-#{str-slug($key)}: #{$value};
+  }
+
+  // Z-index
+  @each $key,
+  $value in $z-index {
+    --z-index-#{str-slug($key)}: #{$value};
+  }
+
+  // Font
+  --font-family-primary: #{$font-family-primary};
+  --font-family-secondary: #{$font-family-secondary};
+
+  @each $key,
+  $value in $font-size {
+    --font-size-#{str-slug($key)}: #{$value};
+  }
+
+  @each $key,
+  $value in $line-height {
+    --line-height-#{str-slug($key)}: #{$value};
+  }
+
+  // Spacing
+  --base-spacing: #{$base-spacing};
+
+  // Breakpoints
+  @each $key,
+  $value in $breakpoint {
+    --breakpoint-#{str-slug($key)}: #{$value};
+  }
+}

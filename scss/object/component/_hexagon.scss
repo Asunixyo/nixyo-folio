@@ -1,0 +1,33 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-hexagon {
+  &-4col {
+    $maxWidth: map-get($max-width, "content");
+    $gap: mu(3);
+    $columns: 4;
+    $hexagonWidthWithoutGap: calc($maxWidth / $columns);
+    $hexagonWidth: $hexagonWidthWithoutGap - calc($gap * ($columns - 1) / $columns);
+    $hexagonHeight: calc($hexagonWidth * sqrt(3) / 2);
+    
+    position: relative;
+    width: $hexagonWidth;
+    height: $hexagonHeight;
+    background-color: map-get($global-colors, "primary");
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  &-3col {
+    $maxWidth: 904px;
+    $gap: mu(3);
+    $columns: 3;
+    $hexagonWidthWithoutGap: calc($maxWidth / $columns);
+    $hexagonWidth: $hexagonWidthWithoutGap - calc($gap * ($columns - 1) / $columns);
+    $hexagonHeight: calc($hexagonWidth * sqrt(3) / 2);
+    
+    position: relative;
+    width: $hexagonWidth;
+    height: $hexagonHeight;
+    background-color: map-get($global-colors, "primary");
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+}

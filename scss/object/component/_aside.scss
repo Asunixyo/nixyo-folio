@@ -1,0 +1,22 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+aside {
+  h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: mu(3);
+    line-height: mu(4);
+    font-weight: bold;
+    margin-bottom: mu(2);
+  }
+  
+  .toc_widget_list li {
+    margin-bottom: mu(1);
+  }
+
+  .toc_widget_list ul {
+    padding-left: mu(2);
+  }
+}

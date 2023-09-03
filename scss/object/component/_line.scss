@@ -1,0 +1,6 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-line-connect {
+  stroke: map-get($global-colors, "primary");
+}

@@ -1,0 +1,20 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-sidebar-nav {
+  position: relative;
+  &-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: mu(11);
+    background-color: map-get($global-colors, "secondary");
+    ul {
+      width: mu(11);
+      li {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

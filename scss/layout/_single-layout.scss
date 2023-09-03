@@ -1,0 +1,13 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.l-single-tech,
+.l-single-blog {
+  &-container {
+    &-content {
+      display: grid;
+      grid-template-columns: 7fr 3fr;
+      gap: mu(4);
+    }
+  }
+}

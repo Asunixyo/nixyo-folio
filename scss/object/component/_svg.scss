@@ -1,0 +1,21 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-svg {
+  &-border {
+    stroke: map-get($global-colors, "primary");
+    stroke-width: 2;
+  }
+  &-radius {
+    stroke: map-get($global-colors, "primary");
+    stroke-width: 2;
+    stroke-linejoin: bevel;
+    stroke-dasharray: 32, 32;
+  }
+  &-font {
+    fill: map-get($global-colors, "white");
+  }
+  &-fill-none {
+    fill: none;
+  }
+}

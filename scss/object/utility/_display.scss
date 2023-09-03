@@ -1,0 +1,130 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+$breakpoints: sm, md, lg, xl, sm-md, sm-lg, md-xl, lg-xl;
+
+.u-hidden {
+  display: none;
+}
+
+.u-block {
+  display: block;
+}
+
+@each $breakpoint in $breakpoints {
+  .u-block-#{$breakpoint} {
+    @include respond($breakpoint) {
+      display: block;
+    }
+  }
+}
+
+.u-inline-block {
+  display: inline-block;
+}
+
+.u-visible {
+  visibility: visible;
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: mu(3);
+  justify-items: center;
+  align-items: stretch;
+}
+
+.u-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: mu(3);
+  justify-items: center;
+  align-items: stretch;
+}
+
+.u-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: mu(3);
+  justify-items: center;
+  align-items: stretch;
+}
+
+.u-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: mu(3);
+  justify-items: center;
+  align-items: stretch;
+}
+
+.u-grid-70-30 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: mu(3);
+  justify-items: center;
+  align-items: stretch;
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 1 through 5 {
+    .u-grid-#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        column-gap: mu(3);
+        justify-items: center;
+        align-items: stretch;
+      }
+    }
+  }
+}
+
+.u-grid-2-gap10-md-xl {
+  @include respond(md-xl) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: mu(10);
+    justify-items: center;
+    align-items: stretch;
+  }
+}
+
+.u-grid-2-gap13 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: mu(13);
+  justify-items: center;
+  align-items: stretch;
+}
+
+.u-grid-3-gap11 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: mu(11);
+  justify-items: center;
+  align-items: stretch;
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-gap-col-#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        column-gap: mu($i);
+      }
+    }
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  .u-none-#{$breakpoint} {
+    @include respond($breakpoint) {
+      display: none !important;
+    }
+  }
+}

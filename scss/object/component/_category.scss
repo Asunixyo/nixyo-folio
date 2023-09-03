@@ -1,0 +1,13 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-category {
+  font-weight: bold;
+  &-circle {
+    border-radius: 50%;
+    background-color: aqua;
+    width: mu(2);
+    height: mu(2);
+    margin: auto mu(1) auto 0;
+  }
+}

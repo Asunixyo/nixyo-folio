@@ -1,0 +1,306 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+$circle-object-rotations: (
+  1: 40deg,
+  2: 130deg,
+  3: 220deg,
+  4: 310deg,
+);
+
+$circle-sizes: (
+  default: (
+    radius: mu(80),
+    inner: mu(80) - mu(1),
+  ),
+  sm: (
+    radius: mu(35),
+    inner: mu(35) - mu(1),
+  ),
+  md: (
+    radius: mu(65),
+    inner: mu(65) - mu(1),
+  ),
+  lg: (
+    radius: mu(75),
+    inner: mu(75) - mu(1),
+  ),
+);
+
+$new-sizes: ();
+@each $key, $value in $circle-sizes {
+  $radius-value: map-get($value, radius) - mu(5);
+  $inner-value: $radius-value - mu(1);
+  $new-sizes: map-merge(
+    $new-sizes,
+    (
+      $key: (
+        radius: $radius-value,
+        inner: $inner-value,
+      ),
+    )
+  );
+}
+$circle-sizes-small: $new-sizes;
+
+$new-radii: ();
+@each $key, $value in $circle-sizes {
+  $radius-value: map-get($value, radius);
+  $new-radii: map-merge(
+    $new-radii,
+    (
+      $key: $radius-value,
+    )
+  );
+}
+$circle-radii: $new-radii;
+
+$object-radii: (
+  default: mu(20),
+  sm: mu(10),
+  md: mu(15),
+  lg: mu(20),
+);
+
+.c-circle-img-large {
+  z-index: 0;
+  position: relative;
+  border-radius: 50%;
+
+  @include set-circle-size(map-get($circle-sizes, default));
+
+  background-image: conic-gradient(
+    transparent 0deg 60deg,
+    map-get($global-colors, "primary") 60deg 90deg,
+    transparent 90deg 150deg,
+    map-get($global-colors, "primary") 150deg 180deg,
+    transparent 180deg 240deg,
+    map-get($global-colors, "primary") 240deg 270deg,
+    transparent 270deg 330deg,
+    map-get($global-colors, "primary") 330deg 360deg
+  );
+
+  &::before {
+    z-index: -3;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: map-get($global-colors, "bg-primary");
+  }
+
+  @include respond(sm) {
+    @include set-circle-size(map-get($circle-sizes, sm));
+  }
+
+  @include respond(md) {
+    @include set-circle-size(map-get($circle-sizes, md));
+  }
+
+  @include respond(lg) {
+    @include set-circle-size(map-get($circle-sizes, lg));
+  }
+}
+
+.c-circle-img-small {
+  z-index: -2;
+  position: relative;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    map-get($global-colors, "primary") 0deg 10deg,
+    transparent 10deg 70deg,
+    map-get($global-colors, "primary") 70deg 100deg,
+    transparent 100deg 160deg,
+    map-get($global-colors, "primary") 160deg 190deg,
+    transparent 190deg 250deg,
+    map-get($global-colors, "primary") 250deg 280deg,
+    transparent 280deg 340deg,
+    map-get($global-colors, "primary") 340deg 360deg
+  );
+
+  @include set-circle-size(map-get($circle-sizes-small, default));
+
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: map-get($global-colors, "bg-primary");
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: mu(40);
+    @include respond(sm) {
+      max-width: mu(25);
+    }
+    @include respond(md) {
+      max-width: mu(30);
+    }
+    @include respond(lg) {
+      max-width: mu(35);
+    }
+  }
+
+  @include respond(sm) {
+    @include set-circle-size(map-get($circle-sizes-small, sm));
+  }
+
+  @include respond(md) {
+    @include set-circle-size(map-get($circle-sizes-small, md));
+  }
+
+  @include respond(lg) {
+    @include set-circle-size(map-get($circle-sizes-small, lg));
+  }
+}
+
+.c-circle-object-wrapper {
+  position: absolute;
+
+  @each $breakpoint, $radius in $circle-radii {
+    $current-object-radius: map-get($object-radii, $breakpoint);
+
+    @if $breakpoint == default {
+      width: $radius;
+      height: $radius;
+
+      .c-circle-object {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: $current-object-radius;
+        height: $current-object-radius;
+        background-color: map-get($global-colors, "primary");
+        border-radius: 50%;
+        transform-origin: center;
+        transform: translate(-50%, -50%);
+
+        @each $index, $rotation in $circle-object-rotations {
+          @include set-circle-object-rotation($index, $rotation, $radius);
+        }
+
+        a,
+        img {
+          width: $current-object-radius - mu(1);
+          height: $current-object-radius - mu(1);
+          border-radius: 50%;
+        }
+      }
+    } @else {
+      @include respond($breakpoint) {
+        width: $radius;
+        height: $radius;
+
+        .c-circle-object {
+          width: $current-object-radius;
+          height: $current-object-radius;
+
+          @each $index, $rotation in $circle-object-rotations {
+            @include set-circle-object-rotation($index, $rotation, $radius);
+          }
+
+          a, img {
+            width: $current-object-radius - mu(1);
+            height: $current-object-radius - mu(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+$circle-radii: (
+  sm: mu(15),
+  md: mu(15),
+  lg: mu(20),
+  xl: mu(20),
+);
+
+.c-circle-stat {
+  z-index: -4;
+  position: relative;
+
+  border-radius: 50%;
+  background-image: conic-gradient(
+    map-get($global-colors, "primary") 0deg 120deg,
+    map-get($global-colors, "gray") 120deg 360deg
+  );
+
+  &::before {
+    z-index: -3;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: map-get($global-colors, "bg-primary");
+  }
+
+  @each $breakpoint, $radius in $circle-radii {
+    @include respond($breakpoint) {
+      $circle-radius-inner: calc($radius - mu(1));
+      $circle-radius-inner-pos: calc(($radius - $circle-radius-inner) / 2);
+      width: $radius;
+      height: $radius;
+
+      &::before {
+        top: $circle-radius-inner-pos;
+        left: $circle-radius-inner-pos;
+        width: $circle-radius-inner;
+        height: $circle-radius-inner;
+      }
+    }
+  }
+
+  p {
+    font-family: $font-family-secondary;
+    word-break: break-all;
+  }
+
+  &-percentage {
+    font-size: mu(5);
+    line-height: mu(6);
+  }
+}
+
+.c-circle-dashed {
+  $circle-radius: mu(16);
+  $circle-radius-inner: calc($circle-radius - 4px);
+  $circle-radius-inner-pos: calc(($circle-radius - $circle-radius-inner) / 2);
+
+  z-index: -2;
+  position: absolute;
+  width: $circle-radius;
+  height: $circle-radius;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    map-get($global-colors, "primary") 0deg 30deg,
+    transparent 30deg 60deg,
+    map-get($global-colors, "primary") 60deg 90deg,
+    transparent 90deg 120deg,
+    map-get($global-colors, "primary") 120deg 150deg,
+    transparent 150deg 180deg,
+    map-get($global-colors, "primary") 180deg 210deg,
+    transparent 210deg 240deg,
+    map-get($global-colors, "primary") 240deg 270deg,
+    transparent 270deg 300deg,
+    map-get($global-colors, "primary") 300deg 330deg,
+    transparent 330deg 360deg
+  );
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: $circle-radius-inner-pos;
+    left: $circle-radius-inner-pos;
+    width: $circle-radius-inner;
+    height: $circle-radius-inner;
+    border-radius: 50%;
+    background-color: map-get($global-colors, "bg-primary");
+  }
+  p {
+    z-index: 1;
+    font-family: $font-family-secondary;
+    max-width: mu(15);
+    word-break: normal;
+  }
+}

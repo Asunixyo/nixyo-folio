@@ -1,0 +1,133 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.p-about-container-content {
+  &-cat {
+    svg {
+      width: 80%;
+      height: 80%;
+    }
+    path:hover {
+      cursor: pointer;
+    }
+    #CatEar,
+    #CatHead,
+    #CatLeftFrontLeg,
+    #CatRightFrontLeg,
+    #CatLeftHindLeg,
+    #CatRightHindLeg,
+    #CatTail,
+    #CatBody {
+      fill: #c3c3c3;
+    }
+
+    #CatEar:hover {
+      fill: #33dad0;
+    }
+    #CatHead:hover {
+      fill: #3333da;
+    }
+    #CatLeftFrontLeg:hover {
+      fill: #0B6623;
+    }
+    #CatRightFrontLeg:hover {
+      fill: #d0da33;
+    }
+    #CatLeftHindLeg:hover {
+      fill: #d033da;
+    }
+    #CatRightHindLeg:hover {
+      fill: #da3333;
+    }
+    #CatTail:hover {
+      fill: #33da33;
+    }
+    #CatBody:hover {
+      fill: #ffcc00;
+    }
+  }
+  &-item {
+    &-text {
+      // width: 60%;
+    }
+    &-img {
+      max-width: mu(15);
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.p-about-container-content-item-wrapper {
+  section {
+    &:nth-child(1) {
+      .p-about-container-content-item {
+        &::before {
+          background-image: var(--bg-image-IT-News-Listening);
+        }
+      }
+    }
+    &:nth-child(2) {
+      .p-about-container-content-item {
+        &::before {
+          background-position: left center;
+          background-size: 50% 50%;
+          background-image: var(--bg-image-Tech-Vision);
+        }
+      }
+    }
+    &:nth-child(3) {
+      .p-about-container-content-item {
+        &::before {
+          background-size: 100% 100%;
+          background-image: var(--bg-image-Technology-Track);
+        }
+      }
+    }
+    &:nth-child(4) {
+      .p-about-container-content-item {
+        &::before {
+          background-size: 100% 100%;
+          background-image: var(--bg-image-Algorithm-Ankle);
+        }
+      }
+    }
+    &:nth-child(5) {
+      .p-about-container-content-item {
+        &::before {
+          background-size: 30% 50%;
+          background-image: var(--bg-image-Security-Stance);
+        }
+      }
+    }
+    &:nth-child(6) {
+      .p-about-container-content-item {
+        &::before {
+          background-position: right center;
+          background-size: 50% 100%;
+          background-image: var(--bg-image-Device-Dynamics);
+        }
+      }
+    }
+    &:nth-child(7) {
+      .p-about-container-content-item {
+        &::before {
+          background-position: right center;
+          background-size: 100% 100%;
+          background-image: var(--bg-image-Technology-Tail-End);
+        }
+      }
+    }
+    &:nth-child(8) {
+      .p-about-container-content-item {
+        &::before {
+          background-position: center center;
+          background-size: 100% 100%;
+          background-image: var(--bg-image-Coding-Core);
+        }
+      }
+    }
+  }
+}

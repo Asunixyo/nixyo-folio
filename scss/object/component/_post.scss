@@ -1,0 +1,20 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-post {
+  &-img {
+    max-width: mu(32);
+    img {
+      border-radius: 5%;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-text {
+    &-title {
+      font-size: mu(4);
+      line-height: mu(5);
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+
+.u-text-bold {
+  font-weight: bold;
+}
+
+.u-text-normal {
+  font-weight: normal;
+}
+
+.u-text-underline {
+  text-decoration: underline;
+}
+
+.u-text-start {
+  text-align: start;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-end {
+  text-align: end;
+}
+
+.u-text-horizontal-tb {
+  writing-mode: horizontal-tb;
+}
+
+.u-text-vertical-lr {
+  writing-mode: vertical-lr;
+  transform: scaleY(-1);
+}
+
+.u-text-vertical-rl {
+  writing-mode: vertical-rl;
+  transform: scaleY(-1);
+}
+
+.u-line-height-2 {
+  line-height: mu(2);
+}
+
+.u-line-height-3 {
+  line-height: mu(3);
+}
+
+.u-line-height-4 {
+  line-height: mu(4);
+}
+
+.u-break-word {
+  word-wrap: break-word;
+}
+
+.u-flex-shrink {
+  flex-shrink: 0;
+}
+
+$breakpoints: sm, md, lg, xl, sm-md, sm-lg, md-xl, lg-xl;
+
+@for $i from 1 through 5 {
+  .u-ellipsis-#{$i} {
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: $i;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  .u-flex-shrink-#{$breakpoint} {
+    @include respond($breakpoint) {
+      flex-shrink: 0;
+    }
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 1 through 5 {
+    .u-ellipsis-#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        max-width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: $i;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}

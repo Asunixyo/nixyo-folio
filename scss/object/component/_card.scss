@@ -1,0 +1,102 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-card {
+  &-pickup {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+    background-color: map-get($global-colors, "primary");
+    border-radius: 5%;
+    max-height: mu(40);
+    box-shadow: mu(1) mu(1) 0 map-get($global-colors, "secondary");
+    &-img {
+      height: 100%;
+      > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5% 5% 0 0;
+      }
+    }
+    &-text {
+      padding: mu(1);
+      p {
+        color: map-get($global-colors, "font-secondary");
+      }
+      &-title {
+        margin-top: mu(1);
+        text-decoration: underline;
+      }
+    }
+  }
+  &-blog {
+    &-img {
+      height: 100%;
+      > img {
+        width: 100%;
+        height: 100%;
+        border-radius: mu(1);
+      }
+    }
+    &-text {
+      padding: mu(1);
+      &-title {
+        margin-top: mu(1);
+      }
+    }
+  }
+  &-skill {
+    display: grid;
+    border-radius: mu(1);
+    background-color: map-get($global-colors, "gray");
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      > img {
+        height: mu(12);
+        width: auto;
+      }
+    }
+  }
+  &-category {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
+    border-radius: mu(1);
+    border: 5px solid map-get($global-colors, "primary");
+    &-img {
+      height: 100%;
+      > img {
+        width: 100%;
+        height: 100%;
+        border-radius: mu(1) mu(1) 0 0;
+      }
+    }
+    &-text {
+      &-title {
+        text-decoration: underline;
+      }
+    }
+  }
+  &-recommend {
+    display: grid;
+    grid-template-rows: 0.3fr 0.3fr;
+    a {
+      color: map-get($global-colors, "white") !important;
+    }
+    &-img {
+      width: 100%;
+      height: auto;
+      > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+      }
+    }
+    &-text {
+      padding: mu(1);
+      &-title {
+        margin-top: 0;
+      }
+    }
+  }
+}

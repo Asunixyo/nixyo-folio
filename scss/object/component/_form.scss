@@ -1,0 +1,57 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+form {
+  padding-bottom: mu(5);
+  input {
+    height: mu(6);
+  }
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    color: map-get($global-colors, "font-secondary");
+    width: 100%;
+    background-color: map-get($global-colors, "white");
+    margin-top: mu(1);
+    padding: mu(1);
+    border-radius: mu(1);
+    &::placeholder {
+      color: map-get($global-colors, "gray");
+      opacity: 0.5;
+    }
+  }
+  button[type="submit"] {
+    height: mu(6);
+    border-radius: mu(1);
+    width: mu(14);
+    background-color: map-get($global-colors, "secondary");
+    color: map-get($global-colors, "white");
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  button[name="send"] {
+    background-color: map-get($global-colors, "primary");
+  }
+  p {
+    // margin-top: mu(5);
+  }
+  button {
+    height: mu(6);
+    border-radius: mu(1);
+    width: mu(14);
+    background-color: map-get($global-colors, "secondary");
+    color: map-get($global-colors, "white");
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.mw_wp_form_send_error .mw_wp_form_send_success {
+  text-align: center;
+  margin-top: mu(5);
+  padding-bottom: mu(5);
+}

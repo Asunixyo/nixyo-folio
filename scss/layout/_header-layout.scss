@@ -1,0 +1,12 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.l-header {
+  &-container {
+    padding: mu(5) mu(3);
+    max-width: map-get($max-width, "content");
+  }
+  &-nav {
+    width: mu(23);
+  }
+}

@@ -1,0 +1,141 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+$breakpoints: sm, md, lg, xl, sm-md, sm-lg, md-xl, lg-xl;
+
+// auto
+.u-m-auto {
+  margin: auto;
+}
+
+.u-mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $breakpoint in $breakpoints {
+  .u-mx-auto-#{$breakpoint} {
+    @include respond($breakpoint) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.u-my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+// all
+@for $i from 0 through 35 {
+  .u-m#{$i} {
+    margin: mu($i);
+  }
+}
+
+// top
+@for $i from 0 through 35 {
+  .u-mt#{$i} {
+    margin-top: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-mt#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        margin-top: mu($i);
+      }
+    }
+  }
+}
+
+// bottom
+@for $i from 0 through 35 {
+  .u-mb#{$i} {
+    margin-bottom: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-mb#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        margin-bottom: mu($i);
+      }
+    }
+  }
+}
+
+// right
+@for $i from 0 through 35 {
+  .u-mr#{$i} {
+    margin-right: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-mr#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        margin-right: mu($i);
+      }
+    }
+  }
+}
+
+// left
+@for $i from 0 through 35 {
+  .u-ml#{$i} {
+    margin-left: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-ml#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        margin-left: mu($i);
+      }
+    }
+  }
+}
+
+// x-axis
+@for $i from 0 through 35 {
+  .u-mx#{$i} {
+    margin-right: mu($i);
+    margin-left: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-mx#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        margin-right: mu($i);
+        margin-left: mu($i);
+      }
+    }
+  }
+}
+
+// y-axis
+@for $i from 0 through 35 {
+  .u-my#{$i} {
+    margin-top: mu($i);
+    margin-bottom: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-my#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        margin-top: mu($i);
+        margin-bottom: mu($i);
+      }
+    }
+  }
+}

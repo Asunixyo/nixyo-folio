@@ -1,0 +1,79 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+$breakpoints: sm, md, lg, xl, sm-md, sm-lg, md-xl, lg-xl;
+
+.u-flex {
+  display: flex;
+}
+
+@each $breakpoint in $breakpoints {
+  .u-flex-#{$breakpoint} {
+    @include respond($breakpoint) {
+      display: flex;
+    }
+  }
+}
+
+.u-flex-1 {
+  flex: 1;
+}
+
+.u-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-flex-center-x {
+  display: flex;
+  justify-content: center;
+}
+
+.u-flex-center-y {
+  display: flex;
+  align-items: center;
+}
+
+.u-flex-end-y {
+  display: flex;
+  align-items: flex-end;
+}
+
+.u-flex-space-between-x {
+  display: flex;
+  justify-content: space-between;
+}
+
+.u-flex-space-between-y {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.u-flex-start-x {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.u-flex-end-x {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.u-flex-end-y-col {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.u-flex-direction-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.u-flex-center-x-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

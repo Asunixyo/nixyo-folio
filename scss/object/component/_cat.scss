@@ -1,0 +1,23 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-cat-playing {
+  position: relative;
+  width: mu(13);
+  height: auto;
+  &-img {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-ball {
+    position: absolute;
+    bottom: mu(1);
+    right: 0;
+    background-color: map-get($global-colors, "primary");
+    width: mu(4);
+    height: mu(4);
+    border-radius: 50%;
+  }
+}

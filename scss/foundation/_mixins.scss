@@ -1,0 +1,235 @@
+@use "variables" as *;
+
+$bp-sm: map-get($breakpoint, "sm");
+$bp-md: map-get($breakpoint, "md");
+$bp-lg: map-get($breakpoint, "lg");
+
+// responsive
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $bp-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: #{$bp-sm + 1px}) and (max-width: $bp-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: #{$bp-md + 1px}) and (max-width: $bp-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: $bp-lg) {
+      @content;
+    }
+  }
+  // define display of width range
+  @else if $breakpoint == sm-md {
+    @media (max-width: $bp-md) {
+      @content;
+    }
+  } @else if $breakpoint == sm-lg {
+    @media (max-width: $bp-lg) {
+      @content;
+    }
+  } @else if $breakpoint == md-xl {
+    @media (min-width: #{$bp-md + 1px}) {
+      @content;
+    }
+  } @else if $breakpoint == lg-xl {
+    @media (min-width: #{$bp-lg + 1px}) {
+      @content;
+    }
+  }
+}
+
+@mixin reset-horizon-margins {
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin reset-horizon-margins-revert {
+  &:first-child {
+    margin-right: 0;
+  }
+  &:last-child {
+    margin-left: 0;
+  }
+}
+
+@mixin reset-vertical-margins {
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// h1 style
+@mixin base-h1-style() {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  font-size: map-get($font-size, "h1");
+  line-height: map-get($line-height, "h1");
+  letter-spacing: 0;
+  color: map-get($global-colors, "font-primary");
+  margin-top: mu(4);
+  @include respond(sm-md) {
+    font-size: map-get($font-size, "h1-sm-md");
+    line-height: map-get($line-height, "h1-sm-md");
+  }
+}
+
+// h2 style
+@mixin base-h2-style() {
+  font-family: $font-family-secondary;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  font-size: map-get($font-size, "h2");
+  line-height: map-get($line-height, "h2");
+  letter-spacing: 0;
+  color: map-get($global-colors, "font-primary");
+}
+
+// h3 style
+@mixin base-h3-style() {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  font-size: map-get($font-size, "h3");
+  line-height: map-get($line-height, "h3");
+  letter-spacing: 0;
+  color: map-get($global-colors, "font-primary");
+  margin-top: mu(5);
+  padding-left: mu(1);
+}
+
+// p style
+@mixin base-p-style($font-color: map-get($global-colors, "primary")) {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: map-get($font-size, "p");
+  line-height: map-get($line-height, "p");
+  letter-spacing: 0;
+  color: $font-color;
+}
+
+@mixin h1-blog-style() {
+  @include base-h1-style();
+}
+
+@mixin h2-blog-style($font-color) {
+  @include base-h2-style();
+}
+
+// h2 style
+@mixin h2-style($font-color: map-get($global-colors, "primary")) {
+  @include base-h2-style();
+}
+
+@mixin h2-index-style($font-color) {
+  @include base-h2-style();
+}
+
+@mixin h3-blog-style($font-color) {
+  @include base-h3-style();
+}
+
+@mixin p-style($font-color) {
+  @include base-p-style();
+}
+
+// vertical line style
+@mixin vertical-line-style($color, $top, $left, $height) {
+  top: $top;
+  left: $left;
+  height: $height;
+  width: 1px;
+  background-color: $color;
+}
+
+// text shadow style
+@mixin text-shadow-style($color) {
+  text-shadow: 0px 3px 6px $color;
+}
+
+// button style
+@mixin rounded-button-style($color, $width, $height) {
+  background-color: $color;
+  width: $width;
+  height: $height;
+  border-radius: mu(4);
+}
+
+@mixin square-button-style($color, $width, $height) {
+  background-color: $color;
+  width: $width;
+  height: $height;
+  border-radius: mu(1);
+}
+
+// background style
+@mixin background-image-style($imageUrl, $startOpacity, $endOpacity) {
+  content: "";
+  background: linear-gradient(
+      rgba(0, 0, 0, $startOpacity),
+      rgba(0, 0, 0, $endOpacity)
+    ),
+    url($imageUrl) no-repeat center center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: map-get($z-index, "background-image");
+}
+
+@mixin linear-gradient-style(
+  $direction: right,
+  $color: black,
+  $rate: 50%,
+  $transparent-position: 0
+) {
+  background: linear-gradient(
+    to $direction,
+    $color $rate,
+    transparent $transparent-position
+  );
+}
+
+@mixin set-circle-size($sizes) {
+  width: map-get($sizes, radius);
+  height: map-get($sizes, radius);
+  $circle-radius-inner: map-get($sizes, inner);
+  $circle-radius-inner-pos: calc(
+    (map-get($sizes, radius) - $circle-radius-inner) / 2
+  );
+
+  &::before {
+    top: $circle-radius-inner-pos;
+    left: $circle-radius-inner-pos;
+    width: $circle-radius-inner;
+    height: $circle-radius-inner;
+  }
+}
+
+@mixin set-circle-object-rotation($index, $rotation, $radius) {
+  &:nth-child(#{$index}) {
+    transform: translate(-50%, -50%) rotate($rotation)
+      translateY(calc(-1 * $radius / 2));
+    img {
+      transform: rotate(calc(-1 * $rotation));
+    }
+  }
+}

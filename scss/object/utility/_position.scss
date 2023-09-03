@@ -1,0 +1,27 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.u-p-relative {
+  position: relative;
+}
+
+.u-p-fixed {
+  position: fixed;
+  top: 0;
+}
+
+.u-p-absolute {
+  position: absolute;
+}
+
+.u-p-absolute-tl {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.u-p-absolute-br {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}

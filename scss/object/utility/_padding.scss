@@ -1,0 +1,142 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+$breakpoints: sm, md, lg, xl, sm-md, sm-lg, md-xl, lg-xl;
+
+// auto
+.u-p-auto {
+  padding: auto;
+}
+
+.u-px-auto {
+  padding-right: auto;
+  padding-left: auto;
+}
+
+.u-py-auto {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+// all
+@for $i from 0 through 35 {
+  .u-p#{$i} {
+    padding: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-p#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        padding: mu($i);
+      }
+    }
+  }
+}
+
+// top
+@for $i from 0 through 35 {
+  .u-pt#{$i} {
+    padding-top: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-pt#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        padding-top: mu($i);
+      }
+    }
+  }
+}
+
+// bottom
+@for $i from 0 through 35 {
+  .u-pb#{$i} {
+    padding-bottom: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-pb#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        padding-bottom: mu($i);
+      }
+    }
+  }
+}
+
+// right
+@for $i from 0 through 35 {
+  .u-pr#{$i} {
+    padding-right: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-pr#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        padding-right: mu($i);
+      }
+    }
+  }
+}
+
+// left
+@for $i from 0 through 35 {
+  .u-pl#{$i} {
+    padding-left: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-pl#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        padding-left: mu($i);
+      }
+    }
+  }
+}
+
+// x-axis
+@for $i from 0 through 35 {
+  .u-px#{$i} {
+    padding-right: mu($i);
+    padding-left: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-px#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        padding-right: mu($i);
+        padding-left: mu($i);
+      }
+    }
+  }
+}
+
+// y-axis
+@for $i from 0 through 35 {
+  .u-py#{$i} {
+    padding-top: mu($i);
+    padding-bottom: mu($i);
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @for $i from 0 through 35 {
+    .u-py#{$i}-#{$breakpoint} {
+      @include respond($breakpoint) {
+        padding-top: mu($i);
+        padding-bottom: mu($i);
+      }
+    }
+  }
+}

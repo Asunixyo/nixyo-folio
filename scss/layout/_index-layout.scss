@@ -1,0 +1,13 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.l-index {
+  section {
+    margin: mu(10) auto;
+  }
+  &-content-tech {
+    &-container {
+      min-height: mu(80);
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.is-active-page {
+  border: 4px solid map-get($global-colors, "primary");
+}

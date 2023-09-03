@@ -1,0 +1,52 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.p-index-main {
+  &-style {
+    &-title {
+      font-size: mu(8);
+      line-height: mu(8);
+      font-family: $font-family-secondary;
+    }
+    &-text {
+      font-size: mu(3);
+      line-height: mu(4);
+      max-width: mu(90);
+    }
+  }
+
+  &-cat-wrapper {
+    width: mu(31);
+    height: mu(33);
+  }
+  &-round {
+    border-radius: 50%;
+    width: mu(25);
+    height: mu(25);
+    background-color: map-get($global-colors, "secondary");
+  }
+  &-cat {
+    width: mu(20);
+    height: mu(20);
+  }
+}
+
+.p-index-content {
+  margin-top: mu(10);
+  &-style {
+    &-title {
+      margin-bottom: mu(4);
+      @include h2-style;
+    }
+  }
+
+  &-tech {
+    &-recommend {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: mu(1);
+      }
+    }
+  }
+}

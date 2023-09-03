@@ -1,0 +1,8 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.u-opacity2-before {
+  &::before {
+    opacity: 0.2;
+  }
+}

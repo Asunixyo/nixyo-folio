@@ -1,0 +1,125 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-primary-title {
+  $font-size: mu(4);
+  $line-height: $font-size;
+  $underline-width: 5px;
+
+  position: relative;
+  height: $line-height * 2;
+  text-align: center;
+  > * {
+    font-family: $font-family-secondary;
+    font-style: italic;
+  }
+  &-background {
+    position: absolute;
+    bottom: 0;
+    left: mu(3);
+    z-index: -2;
+    color: rgba(map-get($global-colors, "white"), 0.1);
+    font-size: $font-size + mu(1);
+    line-height: $font-size + mu(1);
+    border-bottom: calc($underline-width - 2px) solid
+      map-get($global-colors, "white");
+  }
+  &-foreground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-bottom: $underline-width solid map-get($global-colors, "primary");
+  }
+}
+
+.c-secondary-title {
+  $font-size: mu(3);
+  $line-height: $font-size;
+  $underline-width: 5px;
+
+  position: relative;
+  height: $line-height * 2;
+  text-align: center;
+  > * {
+    font-family: $font-family-secondary;
+    font-style: italic;
+  }
+  &-background {
+    position: absolute;
+    bottom: 0;
+    left: mu(3);
+    z-index: -2;
+    color: rgba(map-get($global-colors, "white"), 0.1);
+    font-size: $font-size + mu(1);
+    line-height: $font-size + mu(1);
+    border-bottom: calc($underline-width - 2px) solid
+      map-get($global-colors, "white");
+  }
+  &-foreground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-bottom: $underline-width solid map-get($global-colors, "secondary");
+  }
+}
+
+.c-2-title {
+  font-size: mu(2);
+  line-height: mu(3);
+  font-weight: bold;
+}
+
+.c-3-title {
+  font-size: mu(3);
+  line-height: mu(4);
+  font-weight: bold;
+}
+
+.c-4-title {
+  font-size: mu(4);
+  line-height: mu(5);
+  font-weight: bold;
+}
+.c-5-title {
+  font-size: mu(5);
+  line-height: mu(6);
+  font-weight: bold;
+}
+
+.c-secondary-3-title {
+  font-family: $font-family-secondary;
+  font-size: mu(3);
+  line-height: mu(4);
+}
+
+.c-secondary-4-title {
+  font-family: $font-family-secondary;
+  font-size: mu(4);
+  line-height: mu(5);
+}
+
+.c-secondary-5-title {
+  font-family: $font-family-secondary;
+  font-size: mu(5);
+  line-height: mu(6);
+  font-weight: bold;
+}
+
+.c-primary-title-center {
+  $font-size: mu(4);
+  $line-height: $font-size;
+  $underline-width: 5px;
+
+  display: inline-block;
+  font-family: $font-family-secondary;
+  font-style: italic;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-bottom: $underline-width solid map-get($global-colors, "primary");
+}

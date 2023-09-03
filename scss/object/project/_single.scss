@@ -1,0 +1,165 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.p-single {
+  h1 {
+    font-size: mu(4);
+    line-height: mu(5);
+    font-weight: bold;
+  }
+
+  img {
+    margin: mu(2) 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h2 {
+    display: inline-block;
+    vertical-align: middle;
+    padding: mu(2);
+    margin-top: mu(2);
+    line-height: 1.3;
+    border-radius: mu(3) 0 0 mu(3);
+    color: map-get($global-colors, "secondary");
+    background: map-get($global-colors, "primary");
+
+    &::before {
+      content: '●';
+      margin-right: mu(1);
+      background: map-get($global-colors, "primary");
+    }
+  }
+
+  h3 {
+    padding-left: mu(1);
+    font-weight: bold;
+    // font-style: italic;
+    position: relative;
+    line-height: mu(2) * 1;
+    margin: mu(3) 0 0 5px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      font-family: $font-family-secondary;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: map-get($global-colors, "primary");
+      transform: skewX(0deg);
+    }
+  }
+
+  p {
+    margin-top: mu(1);
+  }
+
+  .p-single-quote {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: mu(1);
+      content: "“";
+      color: map-get($global-colors, "secondary");
+      font-size: mu(8);
+      line-height: mu(8);
+    }
+
+    background-color: map-get($global-colors, "gray");
+    padding: mu(4) mu(5);
+    border-radius: mu(1);
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-left: mu(3);
+      margin-top: mu(1);
+
+      &::before {
+        position: absolute;
+        top: calc(mu(2) / 2);
+        left: 0;
+        content: "";
+        width: mu(1);
+        height: mu(1);
+        border-radius: 50%;
+        background-color: map-get($global-colors, "secondary");
+      }
+    }
+  }
+
+  a {
+    color: map-get($global-colors, "secondary");
+    text-decoration: underline;
+    border-color: map-get($global-colors, "secondary");
+  }
+
+  .editor-container-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: mu(1) mu(1) 0 0;
+    background-color: map-get($global-colors, "editor-frame");
+
+    .copy-button {
+      cursor: pointer;
+    }
+
+    img {
+      margin-top: 0;
+      width: auto;
+      height: auto;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .editor-container-bottom {
+    height: mu(2);
+    border-radius: 0 0 mu(1) mu(1);
+    background-color: map-get($global-colors, "editor-frame");
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: mu(3);
+
+    li {
+      margin-top: mu(2);
+      text-decoration: underline;
+    }
+  }
+
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  code {
+    border-radius: 4px;
+    padding-left: mu(1);
+    padding-right: mu(1);
+    font-weight: bold;
+    color: map-get($global-colors, "tertiary");
+    background-color: map-get($global-colors, "primary");
+  }
+}
+
+aside {
+  ol {
+    list-style-type: decimal;
+    margin-left: mu(3);
+    padding-left: mu(3);
+
+    li {
+      margin-top: mu(2);
+      text-decoration: underline;
+    }
+  }
+}

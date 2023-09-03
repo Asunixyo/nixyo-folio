@@ -1,0 +1,19 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.test {
+  width: mu(1);
+}
+.p-profile-container-content {
+  &-item{
+    &-img {
+      max-width: mu(30);
+      max-height: mu(30);
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

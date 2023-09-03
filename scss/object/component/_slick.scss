@@ -1,0 +1,56 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-slick {
+  &-items {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    li {
+      max-width: mu(50);
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 5%;
+      }
+    }
+    .slick-center {
+      border-radius: 5%;
+      z-index: 2;
+      overflow: hidden;
+    }
+  }
+  &-title {
+    font-size: mu(3);
+    line-height: mu(3);
+    max-width: mu(50);
+  }
+  &-date {
+    color: map-get($global-colors, "secondary");
+    font-weight: bold;
+  }
+}
+.slick-prev,
+.slick-next {
+  top: auto;
+  bottom: - mu(13);
+}
+.slick-prev {
+  left: mu(28);
+}
+.slick-next{
+  right: mu(28);
+}
+.slick-prev:before,
+.slick-next:before {
+  z-index: 1000;
+  color: map-get($global-colors, "white");
+}
+// .slick-prev:before {
+//   content: '←';
+//   font-size: 20px;
+// }
+// .slick-next:before {
+//   content: '→';
+//   font-size: 20px;
+// }

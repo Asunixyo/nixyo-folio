@@ -1,0 +1,81 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.c-more {
+  $line-width: 2px;
+  $arrow-length: mu(12);
+  $arrow-point-length: mu(2);
+  $circle-radius: mu(25);
+
+  &-circle-arrow {
+    position: relative;
+    width: $circle-radius;
+    height: $circle-radius;
+    border: $line-width solid map-get($global-colors, "primary");
+    border-radius: 50%;
+    &::before,
+    &::after,
+    span {
+      content: "";
+      position: absolute;
+      background-color: map-get($global-colors, "primary");
+    }
+
+    span {
+      width: $arrow-length;
+      height: $line-width;
+      top: 50%;
+      left: calc(50% - $arrow-length/2);
+    }
+
+    &::before,
+    &::after {
+      width: $arrow-point-length;
+      height: $line-width;
+    }
+    &::before {
+      top: 50%;
+      left: calc(50% + $arrow-length/2 - $arrow-point-length);
+      transform-origin: 100% 0%;
+      transform: translateY(0) rotate(45deg);
+    }
+
+    &::after {
+      top: 50%;
+      left: calc(50% + $arrow-length/2 - $arrow-point-length);
+      transform-origin: 100% 0%;
+      transform: translateY(0) rotate(-45deg);
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &-contact {
+    $line-width: 4px;
+    $circle-radius: mu(20);
+
+    &-circle-arrow {
+      position: relative;
+      width: $circle-radius;
+      height: $circle-radius;
+      border: $line-width solid map-get($global-colors, "primary");
+      border-radius: 50%;
+      span {
+        font-family: $font-family-secondary;
+        font-size: mu(3);
+        font-weight: bold;
+      }
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
+  &-read {
+    border: 1px solid map-get($global-colors, "white");
+    padding: mu(1) mu(5);
+    border-radius: mu(1);
+    max-width: mu(20);
+  }
+}
+

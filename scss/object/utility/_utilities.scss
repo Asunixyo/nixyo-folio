@@ -1,0 +1,59 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+$breakpoints: sm, md, lg, xl, sm-md, sm-lg, md-xl, lg-xl;
+
+.u-w-100 {
+  width: 100%;
+}
+
+@each $breakpoint in $breakpoints {
+  .u-w-100-#{$breakpoint} {
+    @include respond($breakpoint) {
+      width: 100%;
+    }
+  }
+}
+
+.u-w-50 {
+  width: 50%;
+}
+
+.u-w-60 {
+  width: 60%;
+}
+
+@each $breakpoint in $breakpoints {
+  .u-w-60-#{$breakpoint} {
+    @include respond($breakpoint) {
+      width: 60%;
+    }
+  }
+}
+
+.u-max-w-90 {
+  width: mu(90);
+}
+
+.u-h-100 {
+  height: 100%;
+}
+
+.u-w-80 {
+  width: 80%;
+}
+
+.u-w-60 {
+  width: 60%;
+}
+
+.u-w-40 {
+  width: 40%;
+}
+
+.u-max-w-content {
+  max-width: map-get($max-width, "content");
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
