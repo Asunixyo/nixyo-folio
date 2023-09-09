@@ -1151,7 +1151,7 @@ aside .toc_widget_list ul {
 }
 
 .p-index-background-img {
-  background-image: url("/images/index-bg.png");
+  background-image: url("<?php echo get_template_directory_uri(); ?>/images/index-bg.png");
 }
 
 .p-footer-container {
