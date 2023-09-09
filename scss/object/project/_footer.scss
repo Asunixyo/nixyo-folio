@@ -3,39 +3,48 @@
 
 .p-footer {
   &-container {
-    background-color: map-get($global-colors, "secondary");
+    background-color: map-get($global-colors, "primary");
+
     &-main {
       &-sns {
         &-icon {
           width: mu(8);
           height: mu(8);
           border-radius: 50%;
+
           i {
             border-radius: 50%;
           }
+
           &:first-child {
-            color: map-get($global-colors, "bg-primary");
+            color: map-get($global-colors, "font-secondary");
+
             i {
-              background-color: map-get($global-colors, "white");
+              background-color: map-get($global-colors, "bg-primary");
               font-size: mu(8);
             }
           }
+
           &:nth-child(2) {
             background-color: map-get($global-colors, "bg-primary");
+
             i {
-              color: map-get($global-colors, "white");
+              color: map-get($global-colors, "font-secondary");
               font-size: mu(7);
             }
           }
+
           &:last-child {
-            background-color: map-get($global-colors, "white");
+            background-color: map-get($global-colors, "bg-primary");
+
             i {
-              color: map-get($global-colors, "bg-primary");
+              color: map-get($global-colors, "font-secondary");
               font-size: mu(5);
             }
           }
         }
       }
+
       &-bottom {
         &-cat {
           width: mu(25);

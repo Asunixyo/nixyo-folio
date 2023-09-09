@@ -13,6 +13,7 @@
     height: $circle-radius;
     border: $line-width solid map-get($global-colors, "primary");
     border-radius: 50%;
+
     &::before,
     &::after,
     span {
@@ -33,6 +34,7 @@
       width: $arrow-point-length;
       height: $line-width;
     }
+
     &::before {
       top: 50%;
       left: calc(50% + $arrow-length/2 - $arrow-point-length);
@@ -46,10 +48,12 @@
       transform-origin: 100% 0%;
       transform: translateY(0) rotate(-45deg);
     }
+
     &:hover {
       opacity: 0.5;
     }
   }
+
   &-contact {
     $line-width: 4px;
     $circle-radius: mu(20);
@@ -58,19 +62,23 @@
       position: relative;
       width: $circle-radius;
       height: $circle-radius;
-      border: $line-width solid map-get($global-colors, "primary");
+      border: $line-width solid map-get($global-colors, "font-secondary");
       border-radius: 50%;
+
       span {
-        font-family: $font-family-secondary;
+        // font-family: $font-family-secondary;
         font-size: mu(3);
         font-weight: bold;
+        color: map-get($global-colors, "font-secondary");
       }
+
       &:hover {
         opacity: 0.5;
         cursor: pointer;
       }
     }
   }
+
   &-read {
     border: 1px solid map-get($global-colors, "white");
     padding: mu(1) mu(5);
@@ -78,4 +86,3 @@
     max-width: mu(20);
   }
 }
-

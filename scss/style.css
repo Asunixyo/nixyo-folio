@@ -127,7 +127,7 @@ meter {
   --z-index-main: 200;
   --z-index-background-image: -100;
   --font-family-primary: Yu Gothic, sans-serif;
-  --font-family-secondary: Zen Dots, cursive;
+  --font-family-secondary: Lato, Frank Ruhl Libre;
   --font-size-h1: 32px;
   --font-size-h2: 64px;
   --font-size-h3: 24px;
@@ -204,10 +204,10 @@ pre {
 .c-card-pickup {
   display: grid;
   grid-template-rows: 1.5fr 1fr;
-  background-color: #ff8ba7;
+  background-color: #ffc6c7;
   border-radius: 5%;
-  max-height: 320px;
-  box-shadow: 8px 8px 0 #ffc6c7;
+  max-height: 400px;
+  box-shadow: 8px 8px 0 #c3f0ca;
 }
 .c-card-pickup-img {
   height: 100%;
@@ -240,6 +240,9 @@ pre {
 }
 .c-card-blog-text-title {
   margin-top: 8px;
+}
+.c-card-img {
+  font-size: 80px;
 }
 .c-card-skill {
   display: grid;
@@ -335,13 +338,13 @@ pre {
   position: relative;
   width: 160px;
   height: 160px;
-  border: 4px solid #ff8ba7;
+  border: 4px solid #594a4e;
   border-radius: 50%;
 }
 .c-more-contact-circle-arrow span {
-  font-family: "Zen Dots", cursive;
   font-size: 24px;
   font-weight: bold;
+  color: #594a4e;
 }
 .c-more-contact-circle-arrow:hover {
   opacity: 0.5;
@@ -713,7 +716,7 @@ pre {
   }
 }
 .c-circle-stat p {
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
   word-break: break-all;
 }
 .c-circle-stat-percentage {
@@ -742,7 +745,7 @@ pre {
 }
 .c-circle-dashed p {
   z-index: 1;
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
   max-width: 120px;
   word-break: normal;
 }
@@ -753,7 +756,7 @@ pre {
   text-align: center;
 }
 .c-primary-title > * {
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
   font-style: italic;
 }
 .c-primary-title-background {
@@ -782,7 +785,7 @@ pre {
   text-align: center;
 }
 .c-secondary-title > * {
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
   font-style: italic;
 }
 .c-secondary-title-background {
@@ -830,19 +833,19 @@ pre {
 }
 
 .c-secondary-3-title {
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
   font-size: 24px;
   line-height: 32px;
 }
 
 .c-secondary-4-title {
-  font-family: "Zen Dots", cursive;
-  font-size: 32px;
+  font-family: "Lato", Frank Ruhl Libre;
+  font-size: 56px;
   line-height: 40px;
 }
 
 .c-secondary-5-title {
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
   font-size: 40px;
   line-height: 48px;
   font-weight: bold;
@@ -850,7 +853,7 @@ pre {
 
 .c-primary-title-center {
   display: inline-block;
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
   font-style: italic;
   font-size: 32px;
   line-height: 32px;
@@ -1105,7 +1108,7 @@ aside .toc_widget_list ul {
 .p-index-main-style-title {
   font-size: 64px;
   line-height: 64px;
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
 }
 .p-index-main-style-text {
   font-size: 24px;
@@ -1132,7 +1135,7 @@ aside .toc_widget_list ul {
 }
 .p-index-content-style-title {
   margin-bottom: 32px;
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
   font-style: normal;
   font-variant: normal;
   font-weight: bold;
@@ -1147,8 +1150,12 @@ aside .toc_widget_list ul {
   border-radius: 8px;
 }
 
+.p-index-background-img {
+  background-image: url("/images/index-bg.png");
+}
+
 .p-footer-container {
-  background-color: #ffc6c7;
+  background-color: #ff8ba7;
 }
 .p-footer-container-main-sns-icon {
   width: 64px;
@@ -1159,24 +1166,24 @@ aside .toc_widget_list ul {
   border-radius: 50%;
 }
 .p-footer-container-main-sns-icon:first-child {
-  color: #faeee7;
+  color: #594a4e;
 }
 .p-footer-container-main-sns-icon:first-child i {
-  background-color: #ffffff;
+  background-color: #faeee7;
   font-size: 64px;
 }
 .p-footer-container-main-sns-icon:nth-child(2) {
   background-color: #faeee7;
 }
 .p-footer-container-main-sns-icon:nth-child(2) i {
-  color: #ffffff;
+  color: #594a4e;
   font-size: 56px;
 }
 .p-footer-container-main-sns-icon:last-child {
-  background-color: #ffffff;
+  background-color: #faeee7;
 }
 .p-footer-container-main-sns-icon:last-child i {
-  color: #faeee7;
+  color: #594a4e;
   font-size: 40px;
 }
 .p-footer-container-main-bottom-cat {
@@ -1219,7 +1226,7 @@ aside .toc_widget_list ul {
 .p-single h3:before {
   content: "";
   position: absolute;
-  font-family: "Zen Dots", cursive;
+  font-family: "Lato", Frank Ruhl Libre;
   top: 0;
   left: 0;
   width: 4px;

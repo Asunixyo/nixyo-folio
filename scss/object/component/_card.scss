@@ -5,10 +5,10 @@
   &-pickup {
     display: grid;
     grid-template-rows: 1.5fr 1fr;
-    background-color: map-get($global-colors, "primary");
+    background-color: map-get($global-colors, "secondary");
     border-radius: 5%;
-    max-height: mu(40);
-    box-shadow: mu(1) mu(1) 0 map-get($global-colors, "secondary");
+    max-height: mu(50);
+    box-shadow: mu(1) mu(1) 0 map-get($global-colors, "tertiary");
     &-img {
       height: 100%;
       > img {
@@ -43,6 +43,9 @@
         margin-top: mu(1);
       }
     }
+  }
+  &-img {
+    font-size: mu(10);
   }
   &-skill {
     display: grid;
