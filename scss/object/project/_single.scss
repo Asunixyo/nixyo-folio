@@ -149,6 +149,14 @@
     color: map-get($global-colors, "tertiary");
     background-color: map-get($global-colors, "primary");
   }
+
+  .bbr {
+    color: red;
+  }
+
+  .blue {
+    color: blue ;
+  }
 }
 
 aside {

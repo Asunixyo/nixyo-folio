@@ -8,7 +8,7 @@
 <body>
   <?php get_template_part('parts/header') ?>
   <main class="u-max-w-content">
-    <div class="u-p2 p-index-background-img">
+    <div class="p-profile-container-content-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/front-page-bg.png');" alt="背景画像">
       <div class="u-flex-start-x u-mt10">
         <p class="c-3-title u-w-60">
           名前テキスト名前テキスト名前テキスト名前テキスト名前テキスト
@@ -24,16 +24,16 @@
         </p>
       </div>
     </div>
-    <section>
+    <section class="u-mt5">
       <h2 class="c-secondary-4-title u-text-center">About</h2>
       <div class="u-flex-center u-p3">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/nixyo.svg" alt="" />
+        <img src="<?php echo get_template_directory_uri(); ?>/images/about-face.png" alt="顔イラスト" />
       </div>
       <p class="u-text-center">
         テキストテキストテキストテキストテキストテキスト
       </p>
       <div class="u-flex-end-x u-mr3 u-mt7">
-        <a href="">
+        <a href="http://localhost/asunixyo/about/">
           <div class="c-more-circle-arrow">
             <span></span>
           </div>
@@ -78,83 +78,19 @@
         </div>
       </div>
       <div class="u-flex-end-x u-mr3 u-mt7">
-        <a href="">
+        <a href="http://localhost/asunixyo/about/">
           <div class="c-more-circle-arrow">
             <span></span>
           </div>
         </a>
       </div>
     </section>
-    <section>
-      <h2 class="c-secondary-4-title u-text-center">About</h2>
-      <div class="u-flex-md-xl u-flex-md u-m3">
-        <div class="c-post-img u-flex-center u-mx-auto">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/how-to-use-chatgpt.png" alt="" />
-        </div>
-        <div class="u-flex-space-between-y u-ml2 u-p1 u-ml0-sm u-mt1-sm">
-          <p>2023.09.03</p>
-          <p class="c-3-title u-ellipsis-1">
-            タイトルタイトルタイトルタイトルタイトル
-            タイトルタイトルタイトルタイトルタイトル
-            タイトルタイトルタイトルタイトルタイトル
-          </p>
-          <p class="u-ellipsis-2">
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-          </p>
-        </div>
-      </div>
-      <div class="u-flex-md-xl u-flex-md u-m3">
-        <div class="c-post-img u-flex-center u-mx-auto">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/how-to-use-chatgpt.png" alt="" />
-        </div>
-        <div class="u-flex-space-between-y u-ml2 u-p1 u-ml0-sm u-mt1-sm">
-          <p>2023.09.03</p>
-          <p class="c-3-title u-ellipsis-1">
-            タイトルタイトルタイトルタイトルタイトル
-            タイトルタイトルタイトルタイトルタイトル
-            タイトルタイトルタイトルタイトルタイトル
-          </p>
-          <p class="u-ellipsis-2">
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-          </p>
-        </div>
-      </div>
-      <div class="u-flex-md-xl u-flex-md u-m3">
-        <div class="c-post-img u-flex-center u-mx-auto">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/how-to-use-chatgpt.png" alt="" />
-        </div>
-        <div class="u-flex-space-between-y u-ml2 u-p1 u-ml0-sm u-mt1-sm">
-          <p>2023.09.03</p>
-          <p class="c-3-title u-ellipsis-1">
-            タイトルタイトルタイトルタイトルタイトル
-            タイトルタイトルタイトルタイトルタイトル
-            タイトルタイトルタイトルタイトルタイトル
-          </p>
-          <p class="u-ellipsis-2">
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-            テキストテキストテキストテキストテキスト
-          </p>
-        </div>
-      </div>
+    <section class="u-mt5">
+      <h2 class="c-secondary-4-title u-text-center">Blog</h2>
+      <!-- 呼ぶ -->
+      <?php display_custom_posts_with_template('post', 3, 'parts/blog-post-template'); ?>
       <div class="u-flex-end-x u-mr3 u-mt7">
-        <a href="">
+        <a href="http://localhost/asunixyo/archive/">
           <div class="c-more-circle-arrow">
             <span></span>
           </div>
@@ -162,6 +98,7 @@
       </div>
     </section>
   </main>
+  <?php get_footer(); ?>
 </body>
 <?php get_template_part('parts/footer') ?>
 

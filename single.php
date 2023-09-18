@@ -44,6 +44,7 @@
       </ol>
     </aside>
   </main>
+  <?php get_footer(); ?>
 </body>
 <?php get_template_part('parts/footer') ?>
 

@@ -180,7 +180,7 @@ pre {
   max-width: 904px;
 }
 .l-header-nav {
-  width: 184px;
+  width: 264px;
 }
 
 .l-single-tech-container-content,
@@ -1150,10 +1150,6 @@ aside .toc_widget_list ul {
   border-radius: 8px;
 }
 
-.p-index-background-img {
-  background-image: url("<?php echo get_template_directory_uri(); ?>/images/index-bg.png");
-}
-
 .p-footer-container {
   background-color: #ff8ba7;
 }
@@ -1311,6 +1307,12 @@ aside .toc_widget_list ul {
   color: #c3f0ca;
   background-color: #ff8ba7;
 }
+.p-single .bbr {
+  color: red;
+}
+.p-single .blue {
+  color: blue;
+}
 
 aside ol {
   list-style-type: decimal;
@@ -1419,6 +1421,9 @@ aside ol li {
   border-radius: 50%;
   width: 100%;
   height: 100%;
+}
+.p-profile-container-content-img {
+  background-size: 100%;
 }
 
 .u-hidden {
