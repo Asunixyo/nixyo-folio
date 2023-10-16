@@ -7,20 +7,17 @@
 
 <body>
   <?php get_template_part('parts/header') ?>
-  <main class="u-max-w-content">
+  <main class="u-max-w-content u-px2">
     <div class="p-profile-container-content-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/front-page-bg.png');" alt="背景画像">
       <div class="u-flex-start-x u-mt10">
         <p class="c-3-title u-w-60">
-          名前テキスト名前テキスト名前テキスト名前テキスト名前テキスト
+          ウェブを通じて、お客様のストーリーを伝えます
         </p>
       </div>
       <div class="u-flex-end-x u-mt20">
         <p class="u-w-80">
-          自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介
-          自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介
-          自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介
-          自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介
-          自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介
+          HTML、CSS、Sass、JavaScript、WordPressなど、多彩なスキルを持ち、ウェブプロジェクトの成功に貢献してきました。
+          あなたのウェブプロジェクトを実現しましょう。HPの制作を承ります。お気軽にご相談ください。
         </p>
       </div>
     </div>
@@ -29,8 +26,14 @@
       <div class="u-flex-center u-p3">
         <img src="<?php echo get_template_directory_uri(); ?>/images/about-face.png" alt="顔イラスト" />
       </div>
-      <p class="u-text-center">
-        テキストテキストテキストテキストテキストテキスト
+      <p class="u-mt5">
+        東京都出身の24歳、フリーランスのWebエンジニアとして活動しています。
+      </p>
+      <p class="u-mt5">
+        保育業界で4年間の経験を積み、その後はWeb系の会社に転職し、デザインとエンジニアリングの知識を深め、SEOの分野でも実績を持っています。
+      </p>
+      <p class="u-mt5">
+        どうぞよろしくお願いいたします。
       </p>
       <div class="u-flex-end-x u-mr3 u-mt7">
         <a href="http://localhost/asunixyo/about/">
