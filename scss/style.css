@@ -838,7 +838,7 @@ pre {
   line-height: 32px;
 }
 
-.c-secondary-4-title {
+.text-5xl {
   font-family: "Lato", Frank Ruhl Libre;
   font-size: 56px;
   line-height: 40px;
@@ -6292,7 +6292,7 @@ aside ol li {
   margin-bottom: 24px;
 }
 
-.u-mb4 {
+.mb-4 {
   margin-bottom: 32px;
 }
 
@@ -6445,7 +6445,7 @@ aside ol li {
 }
 
 @media (max-width: 600px) {
-  .u-mb4-sm {
+  .mb-4-sm {
     margin-bottom: 32px;
   }
 }
@@ -6661,7 +6661,7 @@ aside ol li {
 }
 
 @media (min-width: 601px) and (max-width: 904px) {
-  .u-mb4-md {
+  .mb-4-md {
     margin-bottom: 32px;
   }
 }
@@ -6877,7 +6877,7 @@ aside ol li {
 }
 
 @media (min-width: 905px) and (max-width: 1200px) {
-  .u-mb4-lg {
+  .mb-4-lg {
     margin-bottom: 32px;
   }
 }
@@ -7093,7 +7093,7 @@ aside ol li {
 }
 
 @media (min-width: 1200px) {
-  .u-mb4-xl {
+  .mb-4-xl {
     margin-bottom: 32px;
   }
 }
@@ -7309,7 +7309,7 @@ aside ol li {
 }
 
 @media (max-width: 904px) {
-  .u-mb4-sm-md {
+  .mb-4-sm-md {
     margin-bottom: 32px;
   }
 }
@@ -7525,7 +7525,7 @@ aside ol li {
 }
 
 @media (max-width: 1200px) {
-  .u-mb4-sm-lg {
+  .mb-4-sm-lg {
     margin-bottom: 32px;
   }
 }
@@ -7741,7 +7741,7 @@ aside ol li {
 }
 
 @media (min-width: 905px) {
-  .u-mb4-md-xl {
+  .mb-4-md-xl {
     margin-bottom: 32px;
   }
 }
@@ -7957,7 +7957,7 @@ aside ol li {
 }
 
 @media (min-width: 1201px) {
-  .u-mb4-lg-xl {
+  .mb-4-lg-xl {
     margin-bottom: 32px;
   }
 }
@@ -30062,7 +30062,7 @@ aside ol li {
   }
 }
 
-.u-text-center {
+.text-center {
   text-align: center;
 }
 
@@ -30090,7 +30090,7 @@ aside ol li {
   text-align: start;
 }
 
-.u-text-center {
+.text-center {
   text-align: center;
 }
 
@@ -30774,7 +30774,7 @@ aside ol li {
   width: 40%;
 }
 
-.u-max-w-content {
+.max-w-4xl {
   max-width: 904px;
   width: 100%;
   margin-left: auto;

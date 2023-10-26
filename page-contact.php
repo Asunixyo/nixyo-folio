@@ -7,11 +7,9 @@
 
 <body>
   <?php get_template_part('parts/header') ?>
-  <main class="u-max-w-content u-mt5">
-    <h2 class="c-secondary-4-title u-text-center u-mb4">Contact</h2>
-    <div class="u-m2-sm-md">
-      <?php the_content(); ?>
-    </div>
+  <main class="max-w-4xl mt-5">
+    <h2 class="text-5xl text-center mb-4">Contact</h2>
+    <?php the_content(); ?>
   </main>
   <?php get_footer(); ?>
 </body>

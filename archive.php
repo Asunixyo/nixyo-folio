@@ -7,7 +7,7 @@
 
 <body>
   <?php get_template_part('parts/header') ?>
-  <main class="u-max-w-content">
+  <main class="max-w-4xl">
     <!-- 呼ぶ -->
     <?php display_custom_posts_with_template('post', 5, 'parts/blog-post-template'); ?>
 

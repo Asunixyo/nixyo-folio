@@ -1,4 +1,4 @@
-<header class="u-flex-space-between-x u-p3 u-max-w-content">
+<header class="u-flex-space-between-x u-p3 max-w-4xl">
   <div class="c-logo u-flex-center u-mx5">
     <a href="<?php echo home_url(); ?>">
       <img src="<?php echo get_template_directory_uri(); ?>/images/logo-asunixyo.png" alt="ロゴ" />

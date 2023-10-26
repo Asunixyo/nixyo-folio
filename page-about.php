@@ -7,18 +7,18 @@
 
 <body>
   <?php get_template_part('parts/header') ?>
-  <main class="u-max-w-content">
-    <section class="u-mt5">
-      <h2 class="c-secondary-4-title u-text-center">About</h2>
+  <main class="max-w-4xl">
+    <section class="mt-5">
+      <h2 class="text-5xl text-center">About</h2>
       <div class="u-flex-center u-p3">
         <img src="<?php echo get_template_directory_uri(); ?>/images/nixyo.svg" alt="" />
       </div>
-      <p class="u-text-center">
+      <p class="text-center">
         初めまして、6ヶ月のWebエンジニア経験を持つ能登明日香（のと あすか）です。プロジェクトの成功と信頼性を大切にし、HTML/CSS/JavaScript(jQuery)を使用したコーディングから、レスポンシブサイト制作、WordPressサイトの構築まで、幅広いウェブ開発スキルを提供いたします。柔軟なスケジュール調整と継続的なコミュニケーションを通じて、お客様の要望に応え、プロジェクトを成功に導きます。
       </p>
     </section>
-    <section class="u-mt5">
-      <h2 class="c-secondary-4-title u-text-center">Skill</h2>
+    <section class="mt-5">
+      <h2 class="text-5xl text-center">Skill</h2>
       <div class="u-grid-3">
         <div class="u-p1 c-card-pickup u-mt3">
           <div class="c-card-img u-flex-center">
@@ -70,8 +70,8 @@
         </div>
       </div>
     </section>
-    <section class="u-mt5">
-      <h2 class="c-secondary-4-title u-text-center">Work</h2>
+    <section class="mt-5">
+      <h2 class="text-5xl text-center">Work</h2>
       <div class="u-flex-center u-mt2">
         <div class="u-mr2">
           <img src="<?php echo get_template_directory_uri(); ?>/images/circle_green.svg" alt="" />

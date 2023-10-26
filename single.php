@@ -7,7 +7,7 @@
 
 <body>
   <?php get_template_part('parts/header') ?>
-  <main class="p-single u-max-w-content u-grid-70-30">
+  <main class="p-single max-w-4xl u-grid-70-30">
     <div class="u-px2">
       <?php
       $title = get_the_title();

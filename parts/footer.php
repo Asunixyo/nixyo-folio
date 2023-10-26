@@ -20,7 +20,7 @@
     <div class="c-more-contact u-my8">
       <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>">
         <div class="c-more-contact-circle-arrow u-flex-center">
-          <span class="c-secondary-4-title u-text-center">contact</span>
+          <span class="text-5xl text-center">contact</span>
         </div>
       </a>
     </div>
