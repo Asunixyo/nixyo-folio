@@ -1082,6 +1082,9 @@ form button {
   text-align: center;
   cursor: pointer;
 }
+form p {
+  margin-top: 32px;
+}
 
 .mw_wp_form_send_error .mw_wp_form_send_success {
   text-align: center;

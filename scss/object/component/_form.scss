@@ -48,6 +48,9 @@ form {
     text-align: center;
     cursor: pointer;
   }
+  p {
+    margin-top: mu(4);
+  }
 }
 
 .mw_wp_form_send_error .mw_wp_form_send_success {
