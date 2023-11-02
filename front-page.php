@@ -36,7 +36,7 @@
         どうぞよろしくお願いいたします。
       </p>
       <div class="u-flex-end-x u-mr3 u-mt7">
-        <a href="http://localhost/asunixyo/about/">
+        <a href="<?php echo get_permalink(get_page_by_path('about')); ?>">
           <div class="c-more-circle-arrow">
             <span></span>
           </div>
@@ -81,7 +81,7 @@
         </div>
       </div>
       <div class="u-flex-end-x u-mr3 u-mt7">
-        <a href="http://localhost/asunixyo/about/">
+        <a href="<?php echo get_permalink(get_page_by_path('about')); ?>">
           <div class="c-more-circle-arrow">
             <span></span>
           </div>
@@ -93,7 +93,7 @@
       <!-- 呼ぶ -->
       <?php display_custom_posts_with_template('post', 3, 'parts/blog-post-template'); ?>
       <div class="u-flex-end-x u-mr3 u-mt7">
-        <a href="http://localhost/asunixyo/archive/">
+        <a href="<?php echo home_url('/archive/'); ?>">
           <div class="c-more-circle-arrow">
             <span></span>
           </div>

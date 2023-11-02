@@ -35,9 +35,6 @@ form {
   button[name="send"] {
     background-color: map-get($global-colors, "primary");
   }
-  p {
-    // margin-top: mu(5);
-  }
   button {
     height: mu(6);
     border-radius: mu(1);
