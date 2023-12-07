@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <?php get_template_part('parts/header') ?>
+  <?php get_template_part('includes/parts/header') ?>
   <main class="p-single max-w-4xl u-grid-70-30">
     <div class="u-px2">
       <?php
@@ -46,6 +46,6 @@
   </main>
   <?php get_footer(); ?>
 </body>
-<?php get_template_part('parts/footer') ?>
+<?php get_template_part('includes/parts/footer') ?>
 
 </html>

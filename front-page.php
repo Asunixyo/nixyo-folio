@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <?php get_template_part('parts/header') ?>
+  <?php get_template_part('includes/parts/header') ?>
   <main class="max-w-4xl u-px2">
     <div class="p-profile-container-content-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/front-page-bg.png');" alt="背景画像">
       <div class="u-flex-start-x u-mt10">
@@ -91,7 +91,7 @@
     <section class="mt-5">
       <h2 class="text-5xl text-center">Blog</h2>
       <!-- 呼ぶ -->
-      <?php display_custom_posts_with_template('post', 3, 'parts/blog-post-template'); ?>
+      <?php display_custom_posts_with_template('post', 3, 'includes/parts/blog-post-template'); ?>
       <div class="u-flex-end-x u-mr3 u-mt7">
         <a href="<?php echo home_url('/archive/'); ?>">
           <div class="c-more-circle-arrow">
@@ -103,6 +103,6 @@
   </main>
   <?php get_footer(); ?>
 </body>
-<?php get_template_part('parts/footer') ?>
+<?php get_template_part('includes/parts/footer') ?>
 
 </html>

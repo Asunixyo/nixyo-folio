@@ -6,10 +6,10 @@
 </head>
 
 <body>
-  <?php get_template_part('parts/header') ?>
+  <?php get_template_part('includes/parts/header') ?>
   <main class="max-w-4xl">
     <!-- 呼ぶ -->
-    <?php display_custom_posts_with_template('post', 5, 'parts/blog-post-template'); ?>
+    <?php display_custom_posts_with_template('post', 5, 'includes/parts/blog-post-template'); ?>
 
     <?php if (function_exists('wp_pagenavi')) {
       wp_pagenavi();
@@ -25,6 +25,6 @@
   </main>
   <?php get_footer(); ?>
 </body>
-<?php get_template_part('parts/footer') ?>
+<?php get_template_part('includes/parts/footer') ?>
 
 </html>
